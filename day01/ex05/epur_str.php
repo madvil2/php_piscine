@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?PHP
 	function ft_split($line)
 	{
@@ -9,7 +10,9 @@
 				unset($res[$i]);
 			$i++;
 		}
-		sort($res, SORT_STRING);
 		return $res;
 	}
+
+	$comp = ft_split($argv[1]);
+	print (join(" ", $comp));
 ?>
