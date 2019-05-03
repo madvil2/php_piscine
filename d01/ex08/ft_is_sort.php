@@ -1,11 +1,12 @@
 <?PHP
 	function ft_is_sort($tab) {
-		$dup = $tab;
-		sort($dup, SORT_STRING);
-		foreach ($tab as $index => $word) {
-			if ($word != $dup[$index])
-				return FALSE;
-		}
-		return TRUE;
+		$sort = $tab;
+		$rsort = $tab;
+		sort($sort);
+		rsort($rsort);
+		if ($sort === $tab || $rsort === $tab)
+			return true;
+		else
+			return false;
 	}
 ?>
